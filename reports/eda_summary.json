@@ -1,0 +1,30 @@
+{
+  "rows": 17379,
+  "columns": 17,
+  "duplicate_rows": 0,
+  "usable_rows": 17379,
+  "missing_values": {
+    "instant": 0,
+    "dteday": 0,
+    "season": 6,
+    "yr": 1,
+    "mnth": 1,
+    "hr": 0,
+    "holiday": 1,
+    "weekday": 0,
+    "workingday": 5,
+    "weathersit": 4,
+    "temp": 11,
+    "atemp": 6,
+    "hum": 6,
+    "windspeed": 5,
+    "casual": 1,
+    "registered": 1,
+    "cnt": 0
+  },
+  "target_mean": 189.46308763450142,
+  "target_median": 142.0,
+  "target_max": 977,
+  "target_iqr_outliers": 505,
+  "outlier_policy": "Retain valid high-demand observations; median imputation for missing numeric features in training folds."
+}
