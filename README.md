@@ -63,50 +63,6 @@ Although Histogram Gradient Boosting has a lower test RMSE, Gradient Boosting is
 
 See [model comparison](reports/model_comparison.csv), [test predictions](reports/test_predictions.csv) and [model metadata](artifacts/metadata.json) for actual measured performance. CV RMSE is the selection criterion; the holdout metrics are descriptive and are not used to tune the model.
 
-## Getting started
-
-Use Python 3.12 and run these commands in the extracted project directory.
-
-```bash
-python -m venv .venv
-```
-
-Activate your virtual environment:
-
-```powershell
-# Windows PowerShell
-.venv\Scripts\Activate.ps1
-```
-
-```bash
-# macOS / Linux
-source .venv/bin/activate
-```
-
-```bash
-python -m pip install -r requirements.txt
-python -m streamlit run app.py
-```
-
-The trained model and reports are already included; no retraining is required to run the dashboard. Only load bundled model artifacts that you trust, since serialized joblib files can execute code during loading.
-
-### Reproduce results
-
-```bash
-python eda.py
-python train.py
-python -m pytest -q
-```
-
-The training script regenerates the selected model, metadata and evaluation reports. Hyperparameter search may take several minutes depending on hardware.
-
-## Deployment on Streamlit Community Cloud
-
-1. Create a GitHub repository and upload the contents of the project directory (including `artifacts`, `reports`, and `data`).
-2. Open [Streamlit Community Cloud](https://share.streamlit.io/) and create an app from the repository.
-3. Choose `main` as the branch, `app.py` as the entry point and Python 3.12 in advanced settings.
-4. Deploy. No keys or credentials are required by the application.
-
 ## Business value and limitations
 
 - Use predicted rental volume as one input into bike redistribution, staffing and maintenance planning.
